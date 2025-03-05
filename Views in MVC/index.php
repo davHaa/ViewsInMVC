@@ -32,7 +32,7 @@ foreach ($hotels as $hotel) {
             <p>{$hotel['description']}</p>
         </div>
     HTML;
-    //////////////
+
 }
 
 // Replace placeholder in template
