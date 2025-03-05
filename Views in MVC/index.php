@@ -1,11 +1,11 @@
 <?php
 
 $hotels = [
-    ['name' => 'Bellagio', 'description' => 'A luxurious hotel with a stunning fountain show.'],
-    ['name' => 'Caesars Palace', 'description' => 'An iconic resort with Roman-themed architecture.'],
-    ['name' => 'The Venetian', 'description' => 'A breathtaking Venice-themed experience.'],
-    ['name' => 'MGM Grand', 'description' => 'A grand hotel with a lion habitat.'],
-    ['name' => 'Wynn Las Vegas', 'description' => 'A high-end hotel with a golf course.']
+    ['name' => 'Luerzer', 'description' => 'Die beste Erfahrung an der heimischen Natur in Oesterrech erhalten Sie hier.'],
+    ['name' => 'Schwarzer Adler', 'description' => 'Der Schwarzer Adler ist für die schwarzen Adler atemberaubend.'],
+    ['name' => 'Urban Lodge', 'description' => 'Die Urban Lodge bietet ein angenehmes Ambiente.'],
+    ['name' => 'Zoku Vienna', 'description' => 'Gerade in Wien braucht man Erholung und dies erwartet Sie in Zoku Vienna.'],
+    ['name' => 'Berghuette Steiermark', 'description' => 'Erlebe ein Abenteuer bei den fantastischen Berghuetten in der Steiermark.']
 ];
 
 $templateFile = 'template.html';
