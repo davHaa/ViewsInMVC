@@ -11,7 +11,6 @@ $hotels = [
 $templateFile = 'template.html';
 if (!file_exists($templateFile)) {
     die('Template file not found');
-
 }
 
 $template = file_get_contents($templateFile);
