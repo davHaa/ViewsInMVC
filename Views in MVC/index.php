@@ -31,4 +31,3 @@ foreach ($hotels as $hotel) {
 $output = str_replace('{{HOTELS}}', $hotelItems, $template);
 
 echo $output;
-?>
