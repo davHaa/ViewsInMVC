@@ -5,15 +5,15 @@ body {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: cadetblue;
 }
 
 .hotel {
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: grey;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
