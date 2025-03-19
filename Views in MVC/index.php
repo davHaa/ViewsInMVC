@@ -13,6 +13,7 @@ if (!file_exists($templateFile)) {
     die('Template file not found');
 }
 
+//kommentar
 $template = file_get_contents($templateFile);
 
 $hotelItems = "";
