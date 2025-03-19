@@ -14,6 +14,7 @@ if (!file_exists($templateFile)) {
 }
 
 //kommentar
+//adhadhada
 $template = file_get_contents($templateFile);
 
 $hotelItems = "";
