@@ -1,19 +1,17 @@
-
-
 body {
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: cadetblue;
+    background-color: #ffffff;
 }
 
 .hotel {
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid black;
+    border: 1px solid #b1b1b1;
     border-radius: 8px;
-    background-color: grey;
+    background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
