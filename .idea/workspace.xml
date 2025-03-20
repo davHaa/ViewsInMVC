@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc523dd6-6a20-430b-8474-2ab992b09a7b" name="Changes" comment="änderungen von klasse und composer.json">
+    <list default="true" id="fc523dd6-6a20-430b-8474-2ab992b09a7b" name="Changes" comment="Fehlerbehebung weil Hotels 2mal angezeigt wurden">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Hotel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Hotel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/htl_rennweg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mcdonalds.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/reumannplatz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/sigma_nation.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/template.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742468199192</updated>
-      <workItem from="1742468200225" duration="1224000" />
+      <workItem from="1742468200225" duration="2572000" />
     </task>
     <task id="LOCAL-00001" summary="test1">
       <option name="closed" value="true" />
@@ -98,7 +105,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742469331298</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bilderpfad bei array fixen">
+      <option name="closed" value="true" />
+      <created>1742469725253</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742469725253</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fehlerbehebung weil Hotels 2mal angezeigt wurden">
+      <option name="closed" value="true" />
+      <created>1742469750544</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742469750544</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +130,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test1" />
     <MESSAGE value="änderungen von klasse und composer.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="änderungen von klasse und composer.json" />
+    <MESSAGE value="bilderpfad bei array fixen" />
+    <MESSAGE value="Fehlerbehebung weil Hotels 2mal angezeigt wurden" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fehlerbehebung weil Hotels 2mal angezeigt wurden" />
   </component>
 </project>
