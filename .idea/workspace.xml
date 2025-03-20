@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc523dd6-6a20-430b-8474-2ab992b09a7b" name="Changes" comment="Fehlerbehebung weil Hotels 2mal angezeigt wurden">
+    <list default="true" id="fc523dd6-6a20-430b-8474-2ab992b09a7b" name="Changes" comment="Arrayfehlerbehoben und foreach behoben">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Hotel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Hotel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/htl_rennweg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/mcdonalds.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/reumannplatz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/sigma_nation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/template.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742468199192</updated>
-      <workItem from="1742468200225" duration="2572000" />
+      <workItem from="1742468200225" duration="3357000" />
     </task>
     <task id="LOCAL-00001" summary="test1">
       <option name="closed" value="true" />
@@ -121,7 +115,47 @@
       <option name="project" value="LOCAL" />
       <updated>1742469750544</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Klassenfehlerbehoben">
+      <option name="closed" value="true" />
+      <created>1742471119689</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742471119689</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Arrayfehlerbehoben und foreach behoben">
+      <option name="closed" value="true" />
+      <created>1742471164953</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742471164953</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Arrayfehlerbehoben und foreach behoben">
+      <option name="closed" value="true" />
+      <created>1742471176120</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742471176120</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Arrayfehlerbehoben und foreach behoben">
+      <option name="closed" value="true" />
+      <created>1742471197675</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742471197675</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Arrayfehlerbehoben und foreach behoben">
+      <option name="closed" value="true" />
+      <created>1742471219064</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742471219064</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +166,8 @@
     <MESSAGE value="änderungen von klasse und composer.json" />
     <MESSAGE value="bilderpfad bei array fixen" />
     <MESSAGE value="Fehlerbehebung weil Hotels 2mal angezeigt wurden" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fehlerbehebung weil Hotels 2mal angezeigt wurden" />
+    <MESSAGE value="Klassenfehlerbehoben" />
+    <MESSAGE value="Arrayfehlerbehoben und foreach behoben" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrayfehlerbehoben und foreach behoben" />
   </component>
 </project>
