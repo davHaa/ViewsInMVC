@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc523dd6-6a20-430b-8474-2ab992b09a7b" name="Changes" comment="fehlerbehebung">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fc523dd6-6a20-430b-8474-2ab992b09a7b" name="Changes" comment="code beschreibung hinzufügen">
       <change beforePath="$PROJECT_DIR$/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/template.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742468199192</updated>
-      <workItem from="1742468200225" duration="3978000" />
+      <workItem from="1742468200225" duration="4042000" />
     </task>
     <task id="LOCAL-00001" summary="test1">
       <option name="closed" value="true" />
@@ -163,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742471980247</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="code beschreibung hinzufügen">
+      <option name="closed" value="true" />
+      <created>1742472218400</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1742472218400</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +184,7 @@
     <MESSAGE value="Klassenfehlerbehoben" />
     <MESSAGE value="Arrayfehlerbehoben und foreach behoben" />
     <MESSAGE value="fehlerbehebung" />
-    <option name="LAST_COMMIT_MESSAGE" value="fehlerbehebung" />
+    <MESSAGE value="code beschreibung hinzufügen" />
+    <option name="LAST_COMMIT_MESSAGE" value="code beschreibung hinzufügen" />
   </component>
 </project>
