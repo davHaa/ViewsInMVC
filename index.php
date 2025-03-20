@@ -1,14 +1,14 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php'; // Composer Autoload einbinden
+require_once __DIR__ . '/vendor/autoload.php';
 
-use ViewsInMVC\Entity\Hotel; // Korrekte Klasse importieren
+use ViewsInMVC\Entity\Hotel;
 
 $hotels = [
-    new Hotel("HTL Rennweg", "src/images/htl_rennweg.jpg", "Moderne Bildungseinrichtung mit Schwerpunkt auf Technik.", 5),
-    new Hotel("McDonald's Wien", "src/images/mcdonalds.jpg", "Schnellrestaurant mit internationaler Küche.", 4),
-    new Hotel("Reumannplatz", "src/images/reumannplatz.jpg", "Zentrale Verkehrsdrehscheibe in Wien.", 4.5),
-    new Hotel("Sigma Nation", "src/images/sigma_nation.jpg", "Legendärer Ort für moderne Unterhaltung.", 5),
+    new Hotel("Luerzer Alm", "src/images/luerzer_obertauern.jpg", "Wo die Berge den Himmel berühren, findest du dein perfektes Zuhause auf Zeit."),
+    new Hotel("Wilder Kaiser", "src/images/wilder_kaiser.jpg", "Erholung auf höchstem Niveau – ein Aufenthalt, der die Seele verwöhnt."),
+    new Hotel("Gut-Berg Naturhotel", "src/images/gut_berg_naturhotel.jpg", "Luxus inmitten der Natur – hier beginnt dein unvergessliches Abenteuer."),
+    new Hotel("Alpinhotel Hintertux", "src/images/alpinhotel_hintertux.jpg", "Legendärer Ort für moderne Unterhaltung."),
 ];
 
 $template = file_get_contents(__DIR__ . '/template.html');
@@ -16,13 +16,12 @@ $template = file_get_contents(__DIR__ . '/template.html');
 $hotelHtml = "";
 foreach ($hotels as $hotel) {
     $hotelHtml .= str_replace(
-        ['{{hotel_image}}', '{{hotel_name}}', '{{hotel_description}}', '{{hotel_rating}}'],
-        [$hotel->getImage(), $hotel->getName(), $hotel->getDescription(), $hotel->getRating()],
+        ['{{hotel_image}}', '{{hotel_name}}', '{{hotel_description}}',],
+        [$hotel->getImage(), $hotel->getName(), $hotel->getDescription(),],
         '<div class="hotel">
             <img src="{{hotel_image}}" alt="{{hotel_name}}">
             <h2>{{hotel_name}}</h2>
             <p>{{hotel_description}}</p>
-            <p><strong>Rating:</strong> {{hotel_rating}}</p>
         </div>'
     );
 }
