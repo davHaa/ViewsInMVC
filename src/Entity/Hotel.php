@@ -7,14 +7,13 @@ class Hotel
     private string $name;
     private string $image;
     private string $description;
-    private float $rating;
 
-    public function __construct(string $name, string $image, string $description, float $rating)
+    public function __construct(string $name, string $image, string $description)
     {
         $this->name = $name;
         $this->image = $image;
         $this->description = $description;
-        $this->rating = $rating;
+
     }
 
     public function getName(): string
@@ -32,8 +31,4 @@ class Hotel
         return $this->description;
     }
 
-    public function getRating(): float
-    {
-        return $this->rating;
-    }
 }
