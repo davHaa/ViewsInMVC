@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hotels in Wien</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .hotel { border: 1px solid #ddd; margin: 10px; padding: 10px; text-align: center; }
+        .hotel img {
+            width: 500px;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 10px;
+        }
+        @media (min-width: 600px) {
+            .hotel { width: 45%; display: inline-block; vertical-align: top; }
+        }
+        h1{text-align: center}
+    </style>
+</head>
+<body>
+<h1>Hotels in Wien</h1>
+<!-- START_HOTEL_LOOP -->
+<div class="hotel">
+    <img src="C:/Users/david/PhpstormProjects/ViewsInMVC/htl_rennweg.jpg" alt="HTL Rennweg">
+    <h2>HTL Rennweg</h2>
+    <p>Moderne Bildungseinrichtung mit Schwerpunkt auf Technik.</p>
+    <p><strong>Rating:</strong> 5/5</p>
+</div>
+
+<div class="hotel">
+    <img src="C:/Users/david/PhpstormProjects/ViewsInMVC/mcdonalds.jpg" alt="McDonald's">
+    <h2>McDonald's Wien</h2>
+    <p>Schnellrestaurant mit internationaler Küche.</p>
+    <p><strong>Rating:</strong> 4/5</p>
+</div>
+
+<div class="hotel">
+    <img src="C:/Users/david/PhpstormProjects/ViewsInMVC/reumannplatz.jpg" alt="Reumannplatz">
+    <h2>Reumannplatz</h2>
+    <p>Zentrale Verkehrsdrehscheibe in Wien.</p>
+    <p><strong>Rating:</strong> 4.5/5</p>
+</div>
+
+<div class="hotel">
+    <img src="C:/Users/david/PhpstormProjects/ViewsInMVC/sigma_nation.jpg" alt="Sigma Nation">
+    <h2>Sigma Nation</h2>
+    <p>Legendärer Ort für moderne Unterhaltung.</p>
+    <p><strong>Rating:</strong> 5/5</p>
+</div>
+<!-- END_HOTEL_LOOP -->
+</body>
+</html>
