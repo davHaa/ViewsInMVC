@@ -5,10 +5,10 @@ require_once __DIR__ . '/vendor/autoload.php'; // Composer Autoload einbinden
 use ViewsInMVC\Entity\Hotel; // Korrekte Klasse importieren
 
 $hotels = [
-    new Hotel("HTL Rennweg", "images/htl_rennweg.jpg", "Moderne Bildungseinrichtung mit Schwerpunkt auf Technik.", 5),
-    new Hotel("McDonald's Wien", "images/mcdonalds.jpg", "Schnellrestaurant mit internationaler Küche.", 4),
-    new Hotel("Reumannplatz", "images/reumannplatz.jpg", "Zentrale Verkehrsdrehscheibe in Wien.", 4.5),
-    new Hotel("Sigma Nation", "images/sigma_nation.jpg", "Legendärer Ort für moderne Unterhaltung.", 5),
+    new Hotel("HTL Rennweg", "src/images/htl_rennweg.jpg", "Moderne Bildungseinrichtung mit Schwerpunkt auf Technik.", 5),
+    new Hotel("McDonald's Wien", "src/images/mcdonalds.jpg", "Schnellrestaurant mit internationaler Küche.", 4),
+    new Hotel("Reumannplatz", "src/images/reumannplatz.jpg", "Zentrale Verkehrsdrehscheibe in Wien.", 4.5),
+    new Hotel("Sigma Nation", "src/images/sigma_nation.jpg", "Legendärer Ort für moderne Unterhaltung.", 5),
 ];
 
 $template = file_get_contents(__DIR__ . '/template.html');
