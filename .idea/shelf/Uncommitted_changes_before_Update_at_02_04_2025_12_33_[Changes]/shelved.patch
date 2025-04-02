@@ -1,0 +1,177 @@
+Index: index.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nrequire_once __DIR__ . '/vendor/autoload.php';\r\n\r\nuse ViewsInMVC\\Entity\\Hotel;\r\n\r\n$hotels = [\r\n    new Hotel(\"Luerzer Alm\", \"src/images/luerzer_obertauern.jpg\", \"Wo die Berge den Himmel berühren, findest du dein perfektes Zuhause auf Zeit.\"),\r\n    new Hotel(\"Wilder Kaiser\", \"src/images/wilder_kaiser.jpg\", \"Erholung auf höchstem Niveau – ein Aufenthalt, der die Seele verwöhnt.\"),\r\n    new Hotel(\"Gut-Berg Naturhotel\", \"src/images/gut_berg_naturhotel.jpg\", \"Luxus inmitten der Natur – hier beginnt dein unvergessliches Abenteuer.\"),\r\n    new Hotel(\"Alpinhotel Hintertux\", \"src/images/alpinhotel_hintertux.jpg\", \"Eintauchen, loslassen, genießen – dein Rückzugsort für Körper und Geist.\"),\r\n];\r\n\r\n$template = file_get_contents(__DIR__ . '/template.html');\r\n\r\n$hotelHtml = \"\";\r\nforeach ($hotels as $hotel) {\r\n    $hotelHtml .= str_replace(\r\n        ['{{hotel_image}}', '{{hotel_name}}', '{{hotel_description}}',],\r\n        [$hotel->getImage(), $hotel->getName(), $hotel->getDescription(),],\r\n        '<div class=\"hotel\">\r\n            <img src=\"{{hotel_image}}\" alt=\"{{hotel_name}}\">\r\n            <h2>{{hotel_name}}</h2>\r\n            <p>{{hotel_description}}</p>\r\n        </div>'\r\n    );\r\n}\r\n\r\n$template = str_replace(\"<!-- START_HOTEL_LOOP -->\", $hotelHtml, $template);\r\n$template = str_replace(\"<!-- END_HOTEL_LOOP -->\", \"\", $template);\r\n\r\necho $template;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.php b/index.php
+--- a/index.php	(revision 2677bd6245ec072045a70453f52c0e1c83708190)
++++ b/index.php	(date 1743589898391)
+@@ -15,16 +15,16 @@
+ 
+ $hotelHtml = "";
+ foreach ($hotels as $hotel) {
+-    $hotelHtml .= str_replace(
+-        ['{{hotel_image}}', '{{hotel_name}}', '{{hotel_description}}',],
+-        [$hotel->getImage(), $hotel->getName(), $hotel->getDescription(),],
+-        '<div class="hotel">
+-            <img src="{{hotel_image}}" alt="{{hotel_name}}">
+-            <h2>{{hotel_name}}</h2>
+-            <p>{{hotel_description}}</p>
+-        </div>'
+-    );
++    $hotelHtml .= <<<HTML
++    <div class="hotel">
++        <img src="{$hotel->getImage()}" alt="{$hotel->getName()}">
++        <h2>{$hotel->getName()}</h2>
++        <p>{$hotel->getDescription()}</p>
++    </div>
++
++    HTML;
+ }
++
+ 
+ $template = str_replace("<!-- START_HOTEL_LOOP -->", $hotelHtml, $template);
+ $template = str_replace("<!-- END_HOTEL_LOOP -->", "", $template);
+Index: .idea/php.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"MessDetectorOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PHPCSFixerOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PHPCodeSnifferOptionsConfiguration\">\r\n    <option name=\"highlightLevel\" value=\"WARNING\" />\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PhpIncludePathManager\">\r\n    <include_path>\r\n      <path value=\"$PROJECT_DIR$/Views in MVC/vendor/composer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\r\n    </include_path>\r\n  </component>\r\n  <component name=\"PhpProjectSharedConfiguration\" php_language_level=\"7.4\">\r\n    <option name=\"suggestChangeDefaultLanguageLevel\" value=\"false\" />\r\n  </component>\r\n  <component name=\"PhpStanOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PsalmOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/php.xml b/.idea/php.xml
+--- a/.idea/php.xml	(revision 2677bd6245ec072045a70453f52c0e1c83708190)
++++ b/.idea/php.xml	(date 1743589973535)
+@@ -16,7 +16,7 @@
+       <path value="$PROJECT_DIR$/vendor/composer" />
+     </include_path>
+   </component>
+-  <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
++  <component name="PhpProjectSharedConfiguration" php_language_level="8.4">
+     <option name="suggestChangeDefaultLanguageLevel" value="false" />
+   </component>
+   <component name="PhpStanOptionsConfiguration">
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"fc523dd6-6a20-430b-8474-2ab992b09a7b\" name=\"Changes\" comment=\"fehlerbehebung\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\" synchronizationState=\"SYNCHRONIZE\">\r\n    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>\r\n    <execution>\r\n      <executable path=\"composer\" />\r\n    </execution>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;davHaa&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/davHaa/ViewsInMVC.git&quot;,\r\n    &quot;accountId&quot;: &quot;3d6aabcd-5ae7-4846-a531-54ca5e26f7ef&quot;\r\n  }\r\n}</component>\r\n  <component name=\"PhpWorkspaceProjectConfiguration\" interpreter_name=\"C:\\php\\php.exe\">\r\n    <include_path>\r\n      <path value=\"$PROJECT_DIR$/Views in MVC/vendor/composer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\r\n    </include_path>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2uZu1BvEpqA05ZDsPUsO9uWrX9a\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.26053.13\" />\r\n        <option value=\"bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.26053.13\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"fc523dd6-6a20-430b-8474-2ab992b09a7b\" name=\"Changes\" comment=\"\" />\r\n      <created>1742468199192</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1742468199192</updated>\r\n      <workItem from=\"1742468200225\" duration=\"4609000\" />\r\n      <workItem from=\"1742889208277\" duration=\"104000\" />\r\n      <workItem from=\"1742889319450\" duration=\"91000\" />\r\n      <workItem from=\"1742889428531\" duration=\"554000\" />\r\n      <workItem from=\"1742890294456\" duration=\"811000\" />\r\n      <workItem from=\"1742992277743\" duration=\"974000\" />\r\n      <workItem from=\"1743587904164\" duration=\"819000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"test1\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742468511056</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742468511056</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"änderungen von klasse und composer.json\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742469331298</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742469331298</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"bilderpfad bei array fixen\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742469725253</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742469725253</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Fehlerbehebung weil Hotels 2mal angezeigt wurden\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742469750544</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742469750544</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Klassenfehlerbehoben\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742471119689</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742471119689</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Arrayfehlerbehoben und foreach behoben\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742471164953</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742471164953</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Arrayfehlerbehoben und foreach behoben\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742471176120</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742471176120</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Arrayfehlerbehoben und foreach behoben\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742471197675</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742471197675</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Arrayfehlerbehoben und foreach behoben\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742471219064</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742471219064</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"fehlerbehebung\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742471980247</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742471980247</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"code beschreibung hinzufügen\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742472218400</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742472218400</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"fehlerbehebung\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742472498926</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742472498926</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"13\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"test1\" />\r\n    <MESSAGE value=\"änderungen von klasse und composer.json\" />\r\n    <MESSAGE value=\"bilderpfad bei array fixen\" />\r\n    <MESSAGE value=\"Fehlerbehebung weil Hotels 2mal angezeigt wurden\" />\r\n    <MESSAGE value=\"Klassenfehlerbehoben\" />\r\n    <MESSAGE value=\"Arrayfehlerbehoben und foreach behoben\" />\r\n    <MESSAGE value=\"code beschreibung hinzufügen\" />\r\n    <MESSAGE value=\"fehlerbehebung\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"fehlerbehebung\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 2677bd6245ec072045a70453f52c0e1c83708190)
++++ b/.idea/workspace.xml	(date 1743589973532)
+@@ -5,7 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="fc523dd6-6a20-430b-8474-2ab992b09a7b" name="Changes" comment="fehlerbehebung">
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2025_11_42__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -22,6 +24,7 @@
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+         <entry key="$PROJECT_DIR$" value="main" />
++        <entry key="$PROJECT_DIR$" value="main123" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -56,21 +59,21 @@
+   "keyToString": {
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "main",
+-    "ignore.virus.scanning.warn.message": "true",
++    "git-widget-placeholder": "Merging main",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+     "node.js.selected.package.eslint": "(autodetect)",
+     "node.js.selected.package.tslint": "(autodetect)",
+     "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "settings.sync",
+     "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.26053.13" />
+-        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.26053.13" />
++        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-PS-243.24978.50" />
++        <option value="bundled-php-predefined-a98d8de5180a-fbeb0b58ac0f-com.jetbrains.php.sharedIndexes-PS-243.24978.50" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -88,7 +91,7 @@
+       <workItem from="1742889428531" duration="554000" />
+       <workItem from="1742890294456" duration="811000" />
+       <workItem from="1742992277743" duration="974000" />
+-      <workItem from="1743587904164" duration="819000" />
++      <workItem from="1743580837093" duration="4152000" />
+     </task>
+     <task id="LOCAL-00001" summary="test1">
+       <option name="closed" value="true" />
+@@ -186,11 +189,42 @@
+       <option name="project" value="LOCAL" />
+       <updated>1742472498926</updated>
+     </task>
+-    <option name="localTasksCounter" value="13" />
++    <task id="LOCAL-00013" summary="fehlerbehebung">
++      <option name="closed" value="true" />
++      <created>1743581054646</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1743581054646</updated>
++    </task>
++    <option name="localTasksCounter" value="14" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="main" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="test1" />
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2025_11_42__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2025_11_42__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2025_11_42__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1743589898388)
++++ b/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2025_11_42__Changes_.xml	(date 1743589898388)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Checkout_at_02_04_2025_11_42_[Changes]" date="1743586953526" recycled="false" toDelete="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2025_11_42_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 02.04.2025 11:42 [Changes]" />
++</changelist>
+\ No newline at end of file
