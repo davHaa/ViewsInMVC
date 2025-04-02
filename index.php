@@ -15,16 +15,16 @@ $template = file_get_contents(__DIR__ . '/template.html');
 
 $hotelHtml = "";
 foreach ($hotels as $hotel) {
-    $hotelHtml .= str_replace(
-        ['{{hotel_image}}', '{{hotel_name}}', '{{hotel_description}}',],
-        [$hotel->getImage(), $hotel->getName(), $hotel->getDescription(),],
-        '<div class="hotel">
-            <img src="{{hotel_image}}" alt="{{hotel_name}}">
-            <h2>{{hotel_name}}</h2>
-            <p>{{hotel_description}}</p>
-        </div>'
-    );
+    $hotelHtml .= <<<HTML
+    <div class="hotel">
+        <img src="{$hotel->getImage()}" alt="{$hotel->getName()}">
+        <h2>{$hotel->getName()}</h2>
+        <p>{$hotel->getDescription()}</p>
+    </div>
+
+    HTML;
 }
+
 
 $template = str_replace("<!-- START_HOTEL_LOOP -->", $hotelHtml, $template);
 $template = str_replace("<!-- END_HOTEL_LOOP -->", "", $template);
